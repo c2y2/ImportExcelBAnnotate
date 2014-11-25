@@ -23,10 +23,17 @@ public class ImportFileConfig {
 	private Class<?> clazz;//要转换成的对象
 	private File file;//文件
 	private File errorFile;//错误文件
+	private String sheetName;//模板sheetname
 	private List<ImportFileColumn> columnList;//列配置
 	
 	
 	
+	public String getSheetName() {
+		return sheetName;
+	}
+	public void setSheetName(String sheetName) {
+		this.sheetName = sheetName;
+	}
 	public File getErrorFile() {
 		return errorFile;
 	}
@@ -76,6 +83,10 @@ public class ImportFileConfig {
 	}
 	public String getFileType() {
 		return fileType;
+	}
+	
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
 	}
 	public String getInsertSql() {
 		return insertSql;

@@ -9,8 +9,27 @@ import org.c2y2.imports.annotate.ImportColumnConfig;
 import org.c2y2.imports.annotate.ImportExcel;
 import org.c2y2.imports.config.ImportFileColumn;
 import org.c2y2.imports.config.ImportFileConfig;
-
+/**
+ * 
+ * @name AnnotateConfigHandler
+ * @description 注解解释类
+ * @author c2y2 lexiangtaotao1988@gmail.com http://www.c2y2.org
+ * @date 2014年11月26日 上午12:04:21
+ * @version：1.0.0
+ */
 public class AnnotateConfigHandler {
+	/**
+	 * 
+	 * @name handler
+	 * @todo (根据传入的类进行注解处理，并生成相关配置) 
+	 * @conditions (这里描述这个方法适用条件 – 可选) 
+	 * @step (这里描述这个方法业务步骤 – 可选) 
+	 * @param clazz
+	 * @return  ImportFileConfig 
+	 * @auth c2y2 2014年11月26日-上午12:04:38 
+	 * @exception  
+	 * @since  1.0.0
+	 */
 	public static ImportFileConfig handler(Class<?> clazz){
 		Annotation annotationTable = clazz.getAnnotation(ImportExcel.class);
 		if(annotationTable!=null){
@@ -26,6 +45,12 @@ public class AnnotateConfigHandler {
 			
 			String validator = importExcel.validator();
 			importFileConfig.setValidator(validator);
+			
+			String sheetName= importExcel.sheetName();
+			importFileConfig.setSheetName(sheetName);
+			
+			String fileType = importExcel.fileType();
+			importFileConfig.setFileType(fileType);
 			
 			int headerCount = importExcel.headerCount();
 			importFileConfig.setHeaderCount(headerCount);
@@ -74,7 +99,6 @@ public class AnnotateConfigHandler {
 						String fieldName = field.getName();
 						String first = fieldName.substring(0, 1);
 						importFileColumn.setField(fieldName.replaceFirst(first,first.toUpperCase()));
-						System.out.println(importFileColumn.getField());
 						
 						int maxLength = importColumnConfig.maxLength();
 						importFileColumn.setMaxLength(maxLength);

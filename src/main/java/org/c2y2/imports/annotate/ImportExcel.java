@@ -23,6 +23,10 @@ public @interface ImportExcel {
 	 */
 	public String tableName();
 	/**
+	 * 批量导入的类 sheet名字
+	 */
+	public String sheetName();
+	/**
 	 * 批量导入的类 标记文件类型
 	 */
 	public String fileType() default ImportFileConstants.FILE_TYPE_EXCEL2003;

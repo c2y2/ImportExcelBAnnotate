@@ -2,6 +2,7 @@ package org.c2y2.imports.entity;
 
 import org.c2y2.imports.annotate.ImportColumnConfig;
 import org.c2y2.imports.annotate.ImportExcel;
+import org.c2y2.imports.util.ImportFileConstants;
 
 /**
  * 
@@ -11,7 +12,7 @@ import org.c2y2.imports.annotate.ImportExcel;
  * @date 2014年11月25日 下午11:19:05
  * @version：1.0.0
  */
-@ImportExcel(tableName ="user")
+@ImportExcel(tableName ="user",sheetName = "用户",fileType=ImportFileConstants.FILE_TYPE_EXCEL2003)
 public class User {
 	/**
 	 * 姓名
