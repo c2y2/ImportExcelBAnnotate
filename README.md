@@ -5,6 +5,7 @@
 1，将要需要导入的excel内容对应的excel进行注解说明
 如：
 
+```java
 @ImportExcel(tableName ="user")
 public class User {
 	/**
@@ -43,11 +44,13 @@ public class User {
 		this.age = age;
 	}
 }
+```
 2，然后调用AnnotateConfigHandler类中的handler类生成相关配置
 如：
 ImportFileConfig importFileConfig = AnnotateConfigHandler.handler(User.class);
 3，根据模板组织数据，然后进行批量导入
 如：
+
 public class ExcelTest {
 	public static void main(String[] args) {
 		ImportFileConfig importFileConfig = AnnotateConfigHandler.handler(User.class);
