@@ -1,4 +1,4 @@
-package org.c2y2.imports.test;
+package org.c2y2.imports.annotate;
 
 import org.c2y2.imports.config.ImportFileConfig;
 import org.c2y2.imports.core.AnnotateConfigHandler;

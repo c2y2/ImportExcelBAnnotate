@@ -1,4 +1,4 @@
-package org.c2y2.imports.test;
+package org.c2y2.imports.core;
 
 import java.io.File;
 import java.util.List;
