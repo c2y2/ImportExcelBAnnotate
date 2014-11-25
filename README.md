@@ -47,10 +47,12 @@ public class User {
 ```
 2，然后调用AnnotateConfigHandler类中的handler类生成相关配置
 如：
+```java
 ImportFileConfig importFileConfig = AnnotateConfigHandler.handler(User.class);
+```
 3，根据模板组织数据，然后进行批量导入
 如：
-
+```java
 public class ExcelTest {
 	public static void main(String[] args) {
 		ImportFileConfig importFileConfig = AnnotateConfigHandler.handler(User.class);
@@ -66,3 +68,5 @@ public class ExcelTest {
 		}
 	}
 }
+```
+todo待续。。。。
