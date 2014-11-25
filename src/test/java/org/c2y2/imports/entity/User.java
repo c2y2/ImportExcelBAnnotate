@@ -3,6 +3,14 @@ package org.c2y2.imports.entity;
 import org.c2y2.imports.annotate.ImportColumnConfig;
 import org.c2y2.imports.annotate.ImportExcel;
 
+/**
+ * 
+ * @name User
+ * @description 
+ * @author c2y2 lexiangtaotao1988@gmail.com http://www.c2y2.org
+ * @date 2014年11月25日 下午11:19:05
+ * @version：1.0.0
+ */
 @ImportExcel(tableName ="user")
 public class User {
 	/**
